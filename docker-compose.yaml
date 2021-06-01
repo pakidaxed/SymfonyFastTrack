@@ -33,7 +33,7 @@ services:
 
   mysql:
     image: mysql:8
-    container_name: mysql57
+    container_name: mysql8
     restart: always
     ports:
       - "3306:3306"
@@ -41,5 +41,6 @@ services:
       - ./mysql:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: main
     networks:
       - nginx-php8-alpine-mysql8
